@@ -9,7 +9,9 @@ const destinationSchema = new Schema({
     },
     arrival: {
         type: Date
-    }
+    },
+}, {
+    timestamps: true
 })
 
 const flightSchema = new Schema({
@@ -36,7 +38,7 @@ const flightSchema = new Schema({
             return dt.setFullYear(dt.getFullYear() + 1);
         }
     },
-    destination: [destinationSchema]
+    destinations: [destinationSchema]
 }, { 
     timestamps: true
 });

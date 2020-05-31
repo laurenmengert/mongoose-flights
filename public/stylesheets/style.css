@@ -1,8 +1,79 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+  margin: 0;
+  height: 100vh;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 50px, 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: rgb(48, 55, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(193, 197, 211);
+  padding: 20px;
+  height: 100vh;
+  
+}
+
+nav > a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+}
+
+nav > a:hover {
+  color: rgb(48, 55, 87);
+  background-color:white;
+}
+
+#list a {
+  border-radius: 4px;
+  background-color: rgb(48, 55, 87);
+  color: white;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#list a:hover {
+  background-color: white;
+  color: rgb(48, 55, 87);
+}
+
+#addTicket {
+  margin: 10px;
+}
+
+#addTicket a {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(48, 55, 87);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#addTicket a:hover {
+  background-color: white;
+  color: rgb(48, 55, 87)
 }
